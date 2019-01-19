@@ -1,0 +1,82 @@
+<cards>
+    <card>
+        <cardnumber>123456789</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>USD</currency>
+        <issurebank>AMERIA</issurebank>
+        <cardholder>GOR GRIGORYAN</cardholder>
+        <expiredate>25/12/20</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>023144458</cardnumber>
+        <cardbrand>MASTER</cardbrand>
+        <currency>AMD</currency>
+        <issurebank>AMERIA</issurebank>
+        <cardholder>ARAM ARAMYAN</cardholder>
+        <expiredate>22/02/22</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>435676280</cardnumber>
+        <cardbrand>ARCA</cardbrand>
+        <currency>AMD</currency>
+        <issurebank>AMERIA</issurebank>
+        <cardholder>ARAM ARAMYAN</cardholder>
+        <expiredate>22/02/22</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>045556658</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>AMD</currency>
+        <issurebank>AMERIA</issurebank>
+        <cardholder>ARAM ARAMYAN</cardholder>
+        <expiredate>23/12/22</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>123455698</cardnumber>
+        <cardbrand>AmericanExpress</cardbrand>
+        <currency>EUR</currency>
+        <issurebank>HSBC</issurebank>
+        <cardholder>HAKOB VARDANYAN</cardholder>
+        <expiredate>11/11/20</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>1238996098</cardnumber>
+        <cardbrand>ARCA</cardbrand>
+        <currency>AMD</currency>
+        <issurebank>ACBA</issurebank>
+        <cardholder>VAHRAM DAVTYAN</cardholder>
+        <expiredate>09/10/22</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>199655523</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>AMD</currency>
+        <issurebank>AMERIA</issurebank>
+        <cardholder>LEVON HOVHANNISYAN</cardholder>
+        <expiredate>22/10/22</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>673542190</cardnumber>
+        <cardbrand>MASTER</cardbrand>
+        <currency>USD</currency>
+        <issurebank>HSBC</issurebank>
+        <cardholder>BENYAMIN GALSTYAN</cardholder>
+        <expiredate>12/12/20</expiredate>
+    </card>
+
+    <card>
+        <cardnumber>674342163</cardnumber>
+        <cardbrand>VISA</cardbrand>
+        <currency>USD</currency>
+        <issurebank>HSBC</issurebank>
+        <cardholder>BENYAMIN GALSTYAN</cardholder>
+        <expiredate>16/08/20</expiredate>
+    </card>
+</cards>
