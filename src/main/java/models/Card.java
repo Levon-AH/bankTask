@@ -1,6 +1,8 @@
 package models;
 
 import Card_Annotations.*;
+import Card_Reflect.CardReflect;
+import Exceptions.InvalidCardException;
 import enums.CardBrand;
 import enums.Currency;
 import enums.IssurBank;
@@ -25,6 +27,7 @@ public final class Card {
 
     @ValidIssureBank
     private final IssurBank issurBank;
+
 
     public Card(Builder builder){
         number = builder.number;
@@ -60,6 +63,12 @@ public final class Card {
         return issurBank;
     }
 
+    public void validate() throws InvalidCardException {
+        CardReflect cardReflect = new CardReflect(this);
+            if (!cardReflect.validCard()) {
+                throw new InvalidCardException("[ERROR]:invalid card " + this);
+            }
+    }
     @Override
     public String toString() {
         return "Card => {" +

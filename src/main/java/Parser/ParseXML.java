@@ -1,5 +1,6 @@
 package Parser;
 
+import Exceptions.InvalidCardException;
 import enums.CardBrand;
 import enums.IssurBank;
 import enums.Currency;
@@ -44,7 +45,7 @@ public class ParseXML {
            String surname = cardHolder.split(" ")[1];
            String fullName = name.charAt(0) + name.substring(1).toLowerCase() + " " + surname.charAt(0) + surname.substring(1).toLowerCase();
 
-           SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+           SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
            Date expireDate = dateFormat.parse(date);
 
            Card card = new Card.Builder()
@@ -55,11 +56,18 @@ public class ParseXML {
                    .setExpireDate(expireDate)
                    .setIssurBank(issurBank)
                    .build();
-
-           result.add(card);
+           try {
+               card.validate();
+               result.add(card);
+           } catch (InvalidCardException e) {
+               System.err.println(e.getMessage());
+           }
 
        }
-
+        if (result.size() == 0){
+            System.err.println("Not valid cards in xml file");
+            System.exit(0);
+        }
        return result;
    }
 

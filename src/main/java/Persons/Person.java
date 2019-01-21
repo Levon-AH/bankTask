@@ -6,27 +6,32 @@ import helpers.Runner;
 
 public class Person implements Runnable {
     private ATM atm;
+    private String name;
+    private volatile boolean flag = false;
 
-    public Person(ATM atm){
+    public Person(ATM atm, String name){
+        this.name = name;
         this.atm = atm;
-        new Thread(this).start();
+        new Thread(this, name).start();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + " thread");
-        synchronized (atm) {
-            if (atm.isFlag()){
-                Runner.runApp();
-                System.out.println(Thread.currentThread().getState());
-                    atm.setFlag(false);
-                    notifyAll();
-
-            }
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+                Runner runner = new Runner();
+                try {
+                    runner.giveMoney();
+                    runner.nextGive();
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                }
     }
 }

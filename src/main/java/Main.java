@@ -1,13 +1,18 @@
 import Persons.Person;
 import helpers.Runner;
 
+import java.util.Scanner;
+
 public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(Thread.currentThread().getName() + " thread");
-        Runner.runApp();
-        Person person = new Person(Runner.atm);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter persons count ---> ");
+        int count = scanner.nextInt();
+        for (int i = 0; i < count; i++) {
+            new Person(Runner.getAtm(), "Person " + (i + 1));
+        }
     }
 }
 
